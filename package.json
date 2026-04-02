@@ -1,0 +1,31 @@
+{
+  "name": "liftify",
+  "version": "1.0.0",
+  "description": "Fitness and supplement e-commerce platform built with modern web technologies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Muhammed-Moinuddin/Liftify.git"
+  },
+  "keywords": [
+    "fitness",
+    "ecommerce",
+    "supplements",
+    "shopify",
+    "health"
+  ],
+  "author": "Muhammad Moinuddin",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Muhammed-Moinuddin/Liftify/issues"
+  },
+  "homepage": "https://github.com/Muhammed-Moinuddin/Liftify#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
