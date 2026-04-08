@@ -4,7 +4,8 @@
   "description": "Fitness and supplement e-commerce platform built with modern web technologies",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch"
   },
   "repository": {
     "type": "git",
