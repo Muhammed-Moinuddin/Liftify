@@ -1,0 +1,41 @@
+{% if pagination.pages > 0 %}
+  <nav role="navigation" aria-label="Pagination" class="flex justify-center my-8">
+    {% if pagination.previous %}
+      <a
+        href="{{ pagination.previous.url }}"
+        class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 {% if pagination.previous == nil %}opacity-50 cursor-not-allowed{% endif %}"
+        aria-disabled="{% if pagination.previous == nil %}true{% else %}false{% endif %}"
+      >
+        {{ pagination.previous.title | default: 'Previous' }}
+      </a>
+    {% endif %}
+    {% for part in pagination.parts %}
+      {% if part.is_link %}
+        <a
+          href="{{ part.url }}"
+          class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300"
+          aria-disabled="false"
+        >
+         {{ part.title | default: 'Page' }}
+        </a>
+      {% else %}
+        <span
+          class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 opacity-50 cursor-not-allowed"
+          aria-disabled="true"
+        >
+         {{ part.title | default: 'Page' }}
+        </span>
+      {% endif %}
+
+    {% endfor %}
+    {% if pagination.next %}
+      <a
+        href="{{ pagination.next.url }}"
+        class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 {% if pagination.next == nil %}opacity-50 cursor-not-allowed{% endif %}"
+        aria-disabled="{% if pagination.next == nil %}true{% else %}false{% endif %}"
+      >
+        {{ pagination.next.title | default: 'Next' }}
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}
